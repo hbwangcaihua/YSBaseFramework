@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "YSBaseFramework/Base", "YSBaseFramework/Base/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  #s.exclude_files = "YSBaseFramework/Base"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -117,7 +117,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.framework  = "AVFoundation.framework"
+  # s.framework  = "AVFoundation.framework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
