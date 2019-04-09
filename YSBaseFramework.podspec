@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YSBaseFramework"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "wch--A short description of ysbaseframework."
 
   # This description is used to generate tags and improve search results.
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "YSBaseFramework/Base", "YSBaseFramework/Base/**/*.{h,m}"
+  s.source_files  = "YSBaseFramework/Base", "YSBaseFramework/Base/**/*.{h,m,c}"
   #s.exclude_files = "YSBaseFramework/Base"
 
   # s.public_header_files = "Classes/**/*.h"

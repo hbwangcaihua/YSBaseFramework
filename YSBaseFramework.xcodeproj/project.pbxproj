@@ -348,8 +348,8 @@
 			isa = PBXGroup;
 			children = (
 				CD5134A9225C315B00B02642 /* YSChinesePinyinUtil.h */,
-				CD5134AA225C315B00B02642 /* pinyin.h */,
 				CD5134AB225C315B00B02642 /* YSChinesePinyinUtil.m */,
+				CD5134AA225C315B00B02642 /* pinyin.h */,
 				CD5134AC225C315B00B02642 /* pinyin.c */,
 			);
 			path = ChinesePinyin;
