@@ -145,8 +145,9 @@
 		CD5133AF225B748B00B02642 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				CD51345E225C257900B02642 /* Utils */,
 				CD5133B0225B748B00B02642 /* Expand */,
+				CD51345E225C257900B02642 /* Utils */,
+				CD51349C225C2DB600B02642 /* Vendor */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -297,6 +298,93 @@
 				CD513466225C257900B02642 /* YSDateUtil.h */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		CD51349C225C2DB600B02642 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				CD51349D225C2DB600B02642 /* ChinesePinyin */,
+				CD51349E225C2DB600B02642 /* KeyChain */,
+				CD51349F225C2DB600B02642 /* AmrWavVoiceConvert */,
+				CD5134A4225C2DB600B02642 /* HUD */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		CD51349D225C2DB600B02642 /* ChinesePinyin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChinesePinyin;
+			sourceTree = "<group>";
+		};
+		CD51349E225C2DB600B02642 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		CD51349F225C2DB600B02642 /* AmrWavVoiceConvert */ = {
+			isa = PBXGroup;
+			children = (
+				CD5134A0225C2DB600B02642 /* opencore-amrwb */,
+				CD5134A1225C2DB600B02642 /* lib */,
+				CD5134A2225C2DB600B02642 /* opencore-amrnb */,
+				CD5134A3225C2DB600B02642 /* amrwapper */,
+			);
+			path = AmrWavVoiceConvert;
+			sourceTree = "<group>";
+		};
+		CD5134A0225C2DB600B02642 /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
+		CD5134A1225C2DB600B02642 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		CD5134A2225C2DB600B02642 /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		CD5134A3225C2DB600B02642 /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+		CD5134A4225C2DB600B02642 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				CD5134A5225C2DB600B02642 /* LCProgressHUD */,
+				CD5134A6225C2DB600B02642 /* MBProgressHUD */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		CD5134A5225C2DB600B02642 /* LCProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LCProgressHUD;
+			sourceTree = "<group>";
+		};
+		CD5134A6225C2DB600B02642 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
