@@ -94,15 +94,15 @@ Pod::Spec.new do |s|
     #s.source_files  = "YSBaseFramework/Base"
 
     s.subspec 'Expand' do |ss|
-    	ss.source_files = "YSBaseFramework/Base", "YSBaseFramework/Base/Expand/**/*.{h,m,c,a,mm,bundle}"
+    	ss.source_files = "YSBaseFramework/Base", "YSBaseFramework/Base/Expand/**/*.{h,m,c,a,bundle}"
     end
 
     s.subspec 'Utils' do |ss|
-    	ss.source_files = "YSBaseFramework/Base", "YSBaseFramework/Base/Utils/**/*.{h,m,c,a,mm,bundle}"
+    	ss.source_files = "YSBaseFramework/Base", "YSBaseFramework/Base/Utils/**/*.{h,m,c,a,bundle}"
     end
 
     s.subspec 'Vendor' do |ss|
-    	ss.source_files = "YSBaseFramework/Base", "YSBaseFramework/Base/Vendor/**/*.{h,m,c,a,mm,bundle}"
+    	ss.source_files = "YSBaseFramework/Base", "YSBaseFramework/Base/Vendor/**/*.{h,m,c,a,bundle}"
     end
 
   #s.source_files  = "YSBaseFramework/Base", "YSBaseFramework/Base/**/*.{h,m,c}"

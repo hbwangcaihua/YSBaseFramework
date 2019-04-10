@@ -39,10 +39,6 @@
 		CD5134C7225C315B00B02642 /* YSChinesePinyinUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5134AB225C315B00B02642 /* YSChinesePinyinUtil.m */; };
 		CD5134C8225C315B00B02642 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = CD5134AC225C315B00B02642 /* pinyin.c */; };
 		CD5134C9225C315B00B02642 /* YSKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5134AF225C315B00B02642 /* YSKeyChain.m */; };
-		CD5134CA225C315B00B02642 /* VoiceConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = CD5134B4225C315B00B02642 /* VoiceConverter.mm */; };
-		CD5134CB225C315B00B02642 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5134B6225C315B00B02642 /* libopencore-amrwb.a */; };
-		CD5134CC225C315B00B02642 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5134B7225C315B00B02642 /* libopencore-amrnb.a */; };
-		CD5134CD225C315B00B02642 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = CD5134BD225C315B00B02642 /* amrFileCodec.mm */; };
 		CD5134CE225C315B00B02642 /* LCProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD5134C1225C315B00B02642 /* LCProgressHUD.bundle */; };
 		CD5134CF225C315B00B02642 /* LCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5134C3225C315B00B02642 /* LCProgressHUD.m */; };
 		CD5134D0225C315B00B02642 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5134C5225C315B00B02642 /* MBProgressHUD.m */; };
@@ -111,16 +107,6 @@
 		CD5134AC225C315B00B02642 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
 		CD5134AE225C315B00B02642 /* YSKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSKeyChain.h; sourceTree = "<group>"; };
 		CD5134AF225C315B00B02642 /* YSKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSKeyChain.m; sourceTree = "<group>"; };
-		CD5134B2225C315B00B02642 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
-		CD5134B3225C315B00B02642 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
-		CD5134B4225C315B00B02642 /* VoiceConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VoiceConverter.mm; sourceTree = "<group>"; };
-		CD5134B6225C315B00B02642 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
-		CD5134B7225C315B00B02642 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
-		CD5134B8225C315B00B02642 /* VoiceConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceConverter.h; sourceTree = "<group>"; };
-		CD5134BA225C315B00B02642 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
-		CD5134BB225C315B00B02642 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
-		CD5134BD225C315B00B02642 /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
-		CD5134BE225C315B00B02642 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
 		CD5134C1225C315B00B02642 /* LCProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LCProgressHUD.bundle; sourceTree = "<group>"; };
 		CD5134C2225C315B00B02642 /* LCProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCProgressHUD.h; sourceTree = "<group>"; };
 		CD5134C3225C315B00B02642 /* LCProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCProgressHUD.m; sourceTree = "<group>"; };
@@ -133,8 +119,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD5134CB225C315B00B02642 /* libopencore-amrwb.a in Frameworks */,
-				CD5134CC225C315B00B02642 /* libopencore-amrnb.a in Frameworks */,
 				CD51345D225B7BC000B02642 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,7 +322,6 @@
 			children = (
 				CD5134A8225C315B00B02642 /* ChinesePinyin */,
 				CD5134AD225C315B00B02642 /* KeyChain */,
-				CD5134B0225C315B00B02642 /* AmrWavVoiceConvert */,
 				CD5134BF225C315B00B02642 /* HUD */,
 			);
 			path = Vendor;
@@ -362,55 +345,6 @@
 				CD5134AF225C315B00B02642 /* YSKeyChain.m */,
 			);
 			path = KeyChain;
-			sourceTree = "<group>";
-		};
-		CD5134B0225C315B00B02642 /* AmrWavVoiceConvert */ = {
-			isa = PBXGroup;
-			children = (
-				CD5134B1225C315B00B02642 /* opencore-amrwb */,
-				CD5134B4225C315B00B02642 /* VoiceConverter.mm */,
-				CD5134B5225C315B00B02642 /* lib */,
-				CD5134B8225C315B00B02642 /* VoiceConverter.h */,
-				CD5134B9225C315B00B02642 /* opencore-amrnb */,
-				CD5134BC225C315B00B02642 /* amrwapper */,
-			);
-			path = AmrWavVoiceConvert;
-			sourceTree = "<group>";
-		};
-		CD5134B1225C315B00B02642 /* opencore-amrwb */ = {
-			isa = PBXGroup;
-			children = (
-				CD5134B2225C315B00B02642 /* if_rom.h */,
-				CD5134B3225C315B00B02642 /* dec_if.h */,
-			);
-			path = "opencore-amrwb";
-			sourceTree = "<group>";
-		};
-		CD5134B5225C315B00B02642 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				CD5134B6225C315B00B02642 /* libopencore-amrwb.a */,
-				CD5134B7225C315B00B02642 /* libopencore-amrnb.a */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		CD5134B9225C315B00B02642 /* opencore-amrnb */ = {
-			isa = PBXGroup;
-			children = (
-				CD5134BA225C315B00B02642 /* interf_dec.h */,
-				CD5134BB225C315B00B02642 /* interf_enc.h */,
-			);
-			path = "opencore-amrnb";
-			sourceTree = "<group>";
-		};
-		CD5134BC225C315B00B02642 /* amrwapper */ = {
-			isa = PBXGroup;
-			children = (
-				CD5134BD225C315B00B02642 /* amrFileCodec.mm */,
-				CD5134BE225C315B00B02642 /* amrFileCodec.h */,
-			);
-			path = amrwapper;
 			sourceTree = "<group>";
 		};
 		CD5134BF225C315B00B02642 /* HUD */ = {
@@ -528,7 +462,6 @@
 				CD513417225B748B00B02642 /* NSString+YSBase64.m in Sources */,
 				CD513415225B748B00B02642 /* NSData+YSBase64.m in Sources */,
 				CD5134CF225C315B00B02642 /* LCProgressHUD.m in Sources */,
-				CD5134CA225C315B00B02642 /* VoiceConverter.mm in Sources */,
 				CD51339B225B73CD00B02642 /* AppDelegate.m in Sources */,
 				CD5134C9225C315B00B02642 /* YSKeyChain.m in Sources */,
 				CD513416225B748B00B02642 /* NSString+YSSerialize.m in Sources */,
@@ -543,7 +476,6 @@
 				CD513418225B748B00B02642 /* NSString+YSCheck.m in Sources */,
 				CD513489225C257900B02642 /* YSTimer.m in Sources */,
 				CD51340A225B748B00B02642 /* UIImage+YSResize.m in Sources */,
-				CD5134CD225C315B00B02642 /* amrFileCodec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
