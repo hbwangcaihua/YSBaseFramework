@@ -11,6 +11,10 @@
 
 @interface VoiceConverter : NSObject
 
+/*
+ 需要引用AVFoundation.framework
+ */
+
 /**
  *  转换wav到amr
  *
