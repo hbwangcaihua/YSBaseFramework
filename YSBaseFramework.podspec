@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YSBaseFramework"
-  s.version      = "1.0.8"
+  s.version      = "1.1.0"
   s.summary      = "wch--A short description of ysbaseframework."
 
   # This description is used to generate tags and improve search results.
@@ -94,15 +94,15 @@ Pod::Spec.new do |s|
     #s.source_files  = "YSBaseFramework/Base"
 
     s.subspec 'Expand' do |ss|
-    	ss.source_files = "YSBaseFramework/Base", "YSBaseFramework/Base/Expand/**/*.{h,m,c,a,bundle}"
+    	ss.source_files = "YSBaseFramework/Base", "YSBaseFramework/Base/Expand/**/*.{h,m,c,a}"
     end
 
     s.subspec 'Utils' do |ss|
-    	ss.source_files = "YSBaseFramework/Base", "YSBaseFramework/Base/Utils/**/*.{h,m,c,a,bundle}"
+    	ss.source_files = "YSBaseFramework/Base", "YSBaseFramework/Base/Utils/**/*.{h,m,c,a}"
     end
 
     s.subspec 'Vendor' do |ss|
-    	ss.source_files = "YSBaseFramework/Base", "YSBaseFramework/Base/Vendor/**/*.{h,m,c,a,bundle}"
+    	ss.source_files = "YSBaseFramework/Base", "YSBaseFramework/Base/Vendor/**/*.{h,m,c,a}"
     end
 
   #s.source_files  = "YSBaseFramework/Base", "YSBaseFramework/Base/**/*.{h,m,c}"
@@ -118,6 +118,11 @@ Pod::Spec.new do |s|
   #  You can preserve files from being cleaned, please don't preserve
   #  non-essential files like tests, examples and documentation.
   #
+
+  # s.resources = ['YSBaseFramework/Base/Vendor/HUD/LCProgressHUD/LCProgressHUD.bundle',
+  #                'YSBaseFramework/Base/Vendor/HUD/LCProgressHUD/LCProgressHUD.bundle']
+
+  s.resources = "YSBaseFramework/Base/Vendor/HUD/LCProgressHUD/LCProgressHUD.bundle"
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
@@ -144,7 +149,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
