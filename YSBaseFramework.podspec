@@ -122,7 +122,7 @@ Pod::Spec.new do |s|
   # s.resources = ['YSBaseFramework/Base/Vendor/HUD/LCProgressHUD/LCProgressHUD.bundle',
   #                'YSBaseFramework/Base/Vendor/HUD/LCProgressHUD/LCProgressHUD.bundle']
 
-  s.resources = "YSBaseFramework/Base/Vendor/HUD/LCProgressHUD/LCProgressHUD.bundle"
+  s.resources = "YSBaseFramework/Base/Vendor/HUD/YSLCProgressHUD/YSLCProgressHUD.bundle"
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
