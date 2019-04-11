@@ -4,7 +4,7 @@
 // Created by Matej Bukovinski on 2.4.09.
 //
 
-#import "MBProgressHUD.h"
+#import "YSMBProgressHUD.h"
 #import <tgmath.h>
 
 
@@ -54,7 +54,7 @@ static const CGFloat kLabelFontSize = 16.f;
 static const CGFloat kDetailsLabelFontSize = 12.f;
 
 
-@interface MBProgressHUD () {
+@interface YSMBProgressHUD () {
 	BOOL useAnimation;
 	SEL methodForExecution;
 	id targetForExecution;
@@ -73,7 +73,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 @end
 
 
-@implementation MBProgressHUD
+@implementation YSMBProgressHUD
 
 #pragma mark - Properties
 
@@ -113,7 +113,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 #pragma mark - Class methods
 
 + (MB_INSTANCETYPE)showHUDAddedTo:(UIView *)view animated:(BOOL)animated {
-	MBProgressHUD *hud = [[self alloc] initWithView:view];
+	YSMBProgressHUD *hud = [[self alloc] initWithView:view];
 	hud.removeFromSuperViewOnHide = YES;
 	[view addSubview:hud];
 	[hud show:animated];
@@ -150,7 +150,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 //}
 
 + (BOOL)hideHUDForView:(UIView *)view animated:(BOOL)animated {
-	MBProgressHUD *hud = [self HUDForView:view];
+	YSMBProgressHUD *hud = [self HUDForView:view];
 	if (hud != nil) {
 		hud.removeFromSuperViewOnHide = YES;
 		[hud hide:animated];
@@ -160,8 +160,8 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 }
 
 + (NSUInteger)hideAllHUDsForView:(UIView *)view animated:(BOOL)animated {
-	NSArray *huds = [MBProgressHUD allHUDsForView:view];
-	for (MBProgressHUD *hud in huds) {
+	NSArray *huds = [YSMBProgressHUD allHUDsForView:view];
+	for (YSMBProgressHUD *hud in huds) {
 		hud.removeFromSuperViewOnHide = YES;
 		[hud hide:animated];
 	}
@@ -172,7 +172,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	NSEnumerator *subviewsEnum = [view.subviews reverseObjectEnumerator];
 	for (UIView *subview in subviewsEnum) {
 		if ([subview isKindOfClass:self]) {
-			return (MBProgressHUD *)subview;
+			return (YSMBProgressHUD *)subview;
 		}
 	}
 	return nil;
@@ -195,8 +195,8 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	self = [super initWithFrame:frame];
 	if (self) {
 		// Set default values for properties
-		self.animationType = MBProgressHUDAnimationFade;
-		self.mode = MBProgressHUDModeIndeterminate;
+		self.animationType = YSMBProgressHUDAnimationFade;
+		self.mode = YSMBProgressHUDModeIndeterminate;
 		self.labelText = nil;
 		self.detailsLabelText = nil;
 		self.opacity = 0.8f;
@@ -361,9 +361,9 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
     [self setNeedsDisplay];
 
-	if (animated && animationType == MBProgressHUDAnimationZoomIn) {
+	if (animated && animationType == YSMBProgressHUDAnimationZoomIn) {
 		self.transform = CGAffineTransformConcat(rotationTransform, CGAffineTransformMakeScale(0.5f, 0.5f));
-	} else if (animated && animationType == MBProgressHUDAnimationZoomOut) {
+	} else if (animated && animationType == YSMBProgressHUDAnimationZoomOut) {
 		self.transform = CGAffineTransformConcat(rotationTransform, CGAffineTransformMakeScale(1.5f, 1.5f));
 	}
 	self.showStarted = [NSDate date];
@@ -372,7 +372,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 		[UIView beginAnimations:nil context:NULL];
 		[UIView setAnimationDuration:0.30];
 		self.alpha = 1.0f;
-		if (animationType == MBProgressHUDAnimationZoomIn || animationType == MBProgressHUDAnimationZoomOut) {
+		if (animationType == YSMBProgressHUDAnimationZoomIn || animationType == YSMBProgressHUDAnimationZoomOut) {
 			self.transform = rotationTransform;
 		}
 		[UIView commitAnimations];
@@ -391,9 +391,9 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 		[UIView setAnimationDidStopSelector:@selector(animationFinished:finished:context:)];
 		// 0.02 prevents the hud from passing through touches during the animation the hud will get completely hidden
 		// in the done method
-		if (animationType == MBProgressHUDAnimationZoomIn) {
+		if (animationType == YSMBProgressHUDAnimationZoomIn) {
 			self.transform = CGAffineTransformConcat(rotationTransform, CGAffineTransformMakeScale(1.5f, 1.5f));
-		} else if (animationType == MBProgressHUDAnimationZoomOut) {
+		} else if (animationType == YSMBProgressHUDAnimationZoomOut) {
 			self.transform = CGAffineTransformConcat(rotationTransform, CGAffineTransformMakeScale(0.5f, 0.5f));
 		}
 
@@ -459,7 +459,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 }
 
 - (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block onQueue:(dispatch_queue_t)queue
-	 completionBlock:(MBProgressHUDCompletionBlock)completion {
+	 completionBlock:(YSMBProgressHUDCompletionBlock)completion {
 	self.taskInProgress = YES;
 	self.completionBlock = completion;
 	dispatch_async(queue, ^(void) {
@@ -529,7 +529,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	BOOL isActivityIndicator = [indicator isKindOfClass:[UIActivityIndicatorView class]];
 	BOOL isRoundIndicator = [indicator isKindOfClass:[MBRoundProgressView class]];
 	
-	if (mode == MBProgressHUDModeIndeterminate) {
+	if (mode == YSMBProgressHUDModeIndeterminate) {
 		if (!isActivityIndicator) {
 			// Update to indeterminate indicator
 			[indicator removeFromSuperview];
@@ -542,29 +542,29 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 		[(UIActivityIndicatorView *)indicator setColor:self.activityIndicatorColor];
 #endif
 	}
-	else if (mode == MBProgressHUDModeDeterminateHorizontalBar) {
+	else if (mode == YSMBProgressHUDModeDeterminateHorizontalBar) {
 		// Update to bar determinate indicator
 		[indicator removeFromSuperview];
 		self.indicator = MB_AUTORELEASE([[MBBarProgressView alloc] init]);
 		[self addSubview:indicator];
 	}
-	else if (mode == MBProgressHUDModeDeterminate || mode == MBProgressHUDModeAnnularDeterminate) {
+	else if (mode == YSMBProgressHUDModeDeterminate || mode == YSMBProgressHUDModeAnnularDeterminate) {
 		if (!isRoundIndicator) {
 			// Update to determinante indicator
 			[indicator removeFromSuperview];
 			self.indicator = MB_AUTORELEASE([[MBRoundProgressView alloc] init]);
 			[self addSubview:indicator];
 		}
-		if (mode == MBProgressHUDModeAnnularDeterminate) {
+		if (mode == YSMBProgressHUDModeAnnularDeterminate) {
 			[(MBRoundProgressView *)indicator setAnnular:YES];
 		}
 	} 
-	else if (mode == MBProgressHUDModeCustomView && customView != indicator) {
+	else if (mode == YSMBProgressHUDModeCustomView && customView != indicator) {
 		// Update custom view indicator
 		[indicator removeFromSuperview];
 		self.indicator = customView;
 		[self addSubview:indicator];
-	} else if (mode == MBProgressHUDModeText) {
+	} else if (mode == YSMBProgressHUDModeText) {
 		[indicator removeFromSuperview];
 		self.indicator = nil;
 	}

@@ -37,11 +37,11 @@
 		CD513489225C257900B02642 /* YSTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD513464225C257900B02642 /* YSTimer.m */; };
 		CD51348A225C257900B02642 /* YSFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = CD513465225C257900B02642 /* YSFormat.m */; };
 		CD5134C7225C315B00B02642 /* YSChinesePinyinUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5134AB225C315B00B02642 /* YSChinesePinyinUtil.m */; };
-		CD5134C8225C315B00B02642 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = CD5134AC225C315B00B02642 /* pinyin.c */; };
+		CD5134C8225C315B00B02642 /* yspinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = CD5134AC225C315B00B02642 /* yspinyin.c */; };
 		CD5134C9225C315B00B02642 /* YSKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5134AF225C315B00B02642 /* YSKeyChain.m */; };
-		CD5134CE225C315B00B02642 /* LCProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD5134C1225C315B00B02642 /* LCProgressHUD.bundle */; };
-		CD5134CF225C315B00B02642 /* LCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5134C3225C315B00B02642 /* LCProgressHUD.m */; };
-		CD5134D0225C315B00B02642 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5134C5225C315B00B02642 /* MBProgressHUD.m */; };
+		CD5134CE225C315B00B02642 /* YSLCProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD5134C1225C315B00B02642 /* YSLCProgressHUD.bundle */; };
+		CD5134CF225C315B00B02642 /* YSLCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5134C3225C315B00B02642 /* YSLCProgressHUD.m */; };
+		CD5134D0225C315B00B02642 /* YSMBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5134C5225C315B00B02642 /* YSMBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,16 +102,16 @@
 		CD513465225C257900B02642 /* YSFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSFormat.m; sourceTree = "<group>"; };
 		CD513466225C257900B02642 /* YSDateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDateUtil.h; sourceTree = "<group>"; };
 		CD5134A9225C315B00B02642 /* YSChinesePinyinUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSChinesePinyinUtil.h; sourceTree = "<group>"; };
-		CD5134AA225C315B00B02642 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
+		CD5134AA225C315B00B02642 /* yspinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yspinyin.h; sourceTree = "<group>"; };
 		CD5134AB225C315B00B02642 /* YSChinesePinyinUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSChinesePinyinUtil.m; sourceTree = "<group>"; };
-		CD5134AC225C315B00B02642 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
+		CD5134AC225C315B00B02642 /* yspinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yspinyin.c; sourceTree = "<group>"; };
 		CD5134AE225C315B00B02642 /* YSKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSKeyChain.h; sourceTree = "<group>"; };
 		CD5134AF225C315B00B02642 /* YSKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSKeyChain.m; sourceTree = "<group>"; };
-		CD5134C1225C315B00B02642 /* LCProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LCProgressHUD.bundle; sourceTree = "<group>"; };
-		CD5134C2225C315B00B02642 /* LCProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCProgressHUD.h; sourceTree = "<group>"; };
-		CD5134C3225C315B00B02642 /* LCProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCProgressHUD.m; sourceTree = "<group>"; };
-		CD5134C5225C315B00B02642 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		CD5134C6225C315B00B02642 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		CD5134C1225C315B00B02642 /* YSLCProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YSLCProgressHUD.bundle; sourceTree = "<group>"; };
+		CD5134C2225C315B00B02642 /* YSLCProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLCProgressHUD.h; sourceTree = "<group>"; };
+		CD5134C3225C315B00B02642 /* YSLCProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLCProgressHUD.m; sourceTree = "<group>"; };
+		CD5134C5225C315B00B02642 /* YSMBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSMBProgressHUD.m; sourceTree = "<group>"; };
+		CD5134C6225C315B00B02642 /* YSMBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSMBProgressHUD.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,8 +332,8 @@
 			children = (
 				CD5134A9225C315B00B02642 /* YSChinesePinyinUtil.h */,
 				CD5134AB225C315B00B02642 /* YSChinesePinyinUtil.m */,
-				CD5134AA225C315B00B02642 /* pinyin.h */,
-				CD5134AC225C315B00B02642 /* pinyin.c */,
+				CD5134AA225C315B00B02642 /* yspinyin.h */,
+				CD5134AC225C315B00B02642 /* yspinyin.c */,
 			);
 			path = ChinesePinyin;
 			sourceTree = "<group>";
@@ -350,29 +350,29 @@
 		CD5134BF225C315B00B02642 /* HUD */ = {
 			isa = PBXGroup;
 			children = (
-				CD5134C0225C315B00B02642 /* LCProgressHUD */,
-				CD5134C4225C315B00B02642 /* MBProgressHUD */,
+				CD5134C0225C315B00B02642 /* YSLCProgressHUD */,
+				CD5134C4225C315B00B02642 /* YSMBProgressHUD */,
 			);
 			path = HUD;
 			sourceTree = "<group>";
 		};
-		CD5134C0225C315B00B02642 /* LCProgressHUD */ = {
+		CD5134C0225C315B00B02642 /* YSLCProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				CD5134C1225C315B00B02642 /* LCProgressHUD.bundle */,
-				CD5134C2225C315B00B02642 /* LCProgressHUD.h */,
-				CD5134C3225C315B00B02642 /* LCProgressHUD.m */,
+				CD5134C1225C315B00B02642 /* YSLCProgressHUD.bundle */,
+				CD5134C2225C315B00B02642 /* YSLCProgressHUD.h */,
+				CD5134C3225C315B00B02642 /* YSLCProgressHUD.m */,
 			);
-			path = LCProgressHUD;
+			path = YSLCProgressHUD;
 			sourceTree = "<group>";
 		};
-		CD5134C4225C315B00B02642 /* MBProgressHUD */ = {
+		CD5134C4225C315B00B02642 /* YSMBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				CD5134C5225C315B00B02642 /* MBProgressHUD.m */,
-				CD5134C6225C315B00B02642 /* MBProgressHUD.h */,
+				CD5134C6225C315B00B02642 /* YSMBProgressHUD.h */,
+				CD5134C5225C315B00B02642 /* YSMBProgressHUD.m */,
 			);
-			path = MBProgressHUD;
+			path = YSMBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,7 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD5133A6225B73CE00B02642 /* LaunchScreen.storyboard in Resources */,
-				CD5134CE225C315B00B02642 /* LCProgressHUD.bundle in Resources */,
+				CD5134CE225C315B00B02642 /* YSLCProgressHUD.bundle in Resources */,
 				CD5133A3225B73CE00B02642 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,11 +445,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD5134C8225C315B00B02642 /* pinyin.c in Sources */,
+				CD5134C8225C315B00B02642 /* yspinyin.c in Sources */,
 				CD51348A225C257900B02642 /* YSFormat.m in Sources */,
 				CD51339E225B73CD00B02642 /* ViewController.m in Sources */,
 				CD51341B225B748B00B02642 /* NSArray+YSCheck.m in Sources */,
-				CD5134D0225C315B00B02642 /* MBProgressHUD.m in Sources */,
+				CD5134D0225C315B00B02642 /* YSMBProgressHUD.m in Sources */,
 				CD51340D225B748B00B02642 /* NSDictionary+YSSafe.m in Sources */,
 				CD51340B225B748B00B02642 /* UIImage+YSOrientation.m in Sources */,
 				CD51341A225B748B00B02642 /* NSArray+YSSerialize.m in Sources */,
@@ -461,7 +461,7 @@
 				CD51340C225B748B00B02642 /* NSDictionary+YSSerialize.m in Sources */,
 				CD513417225B748B00B02642 /* NSString+YSBase64.m in Sources */,
 				CD513415225B748B00B02642 /* NSData+YSBase64.m in Sources */,
-				CD5134CF225C315B00B02642 /* LCProgressHUD.m in Sources */,
+				CD5134CF225C315B00B02642 /* YSLCProgressHUD.m in Sources */,
 				CD51339B225B73CD00B02642 /* AppDelegate.m in Sources */,
 				CD5134C9225C315B00B02642 /* YSKeyChain.m in Sources */,
 				CD513416225B748B00B02642 /* NSString+YSSerialize.m in Sources */,

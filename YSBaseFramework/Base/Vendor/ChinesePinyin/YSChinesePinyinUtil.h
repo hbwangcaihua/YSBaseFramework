@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "pinyin.h"
+#import "yspinyin.h"
 
 @interface YSChinesePinyinUtil : NSObject
 @property(strong,nonatomic)NSString *string;

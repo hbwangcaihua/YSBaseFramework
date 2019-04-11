@@ -1,5 +1,5 @@
 //
-//  MBProgressHUD.h
+//  YSMBProgressHUD.h
 //  Version 0.9.1
 //  Created by Matej Bukovinski on 2.4.09.
 //
@@ -30,31 +30,31 @@
 #import <UIKit/UIKit.h>
 #import <CoreGraphics/CoreGraphics.h>
 
-@protocol MBProgressHUDDelegate;
+@protocol YSMBProgressHUDDelegate;
 
 
-typedef NS_ENUM(NSInteger, MBProgressHUDMode) {
+typedef NS_ENUM(NSInteger, YSMBProgressHUDMode) {
 	/** Progress is shown using an UIActivityIndicatorView. This is the default. */
-	MBProgressHUDModeIndeterminate,
+	YSMBProgressHUDModeIndeterminate,
 	/** Progress is shown using a round, pie-chart like, progress view. */
-	MBProgressHUDModeDeterminate,
+	YSMBProgressHUDModeDeterminate,
 	/** Progress is shown using a horizontal progress bar */
-	MBProgressHUDModeDeterminateHorizontalBar,
+	YSMBProgressHUDModeDeterminateHorizontalBar,
 	/** Progress is shown using a ring-shaped progress view. */
-	MBProgressHUDModeAnnularDeterminate,
+	YSMBProgressHUDModeAnnularDeterminate,
 	/** Shows a custom view */
-	MBProgressHUDModeCustomView,
+	YSMBProgressHUDModeCustomView,
 	/** Shows only labels */
-	MBProgressHUDModeText
+	YSMBProgressHUDModeText
 };
 
-typedef NS_ENUM(NSInteger, MBProgressHUDAnimation) {
+typedef NS_ENUM(NSInteger, YSMBProgressHUDAnimation) {
 	/** Opacity animation */
-	MBProgressHUDAnimationFade,
+	YSMBProgressHUDAnimationFade,
 	/** Opacity + scale animation */
-	MBProgressHUDAnimationZoom,
-	MBProgressHUDAnimationZoomOut = MBProgressHUDAnimationZoom,
-	MBProgressHUDAnimationZoomIn
+	YSMBProgressHUDAnimationZoom,
+	YSMBProgressHUDAnimationZoomOut = YSMBProgressHUDAnimationZoom,
+	YSMBProgressHUDAnimationZoomIn
 };
 
 
@@ -85,7 +85,7 @@ typedef NS_ENUM(NSInteger, MBProgressHUDAnimation) {
 #endif
 
 #if NS_BLOCKS_AVAILABLE
-typedef void (^MBProgressHUDCompletionBlock)();
+typedef void (^YSMBProgressHUDCompletionBlock)();
 #endif
 
 
@@ -93,22 +93,22 @@ typedef void (^MBProgressHUDCompletionBlock)();
  * Displays a simple HUD window containing a progress indicator and two optional labels for short messages.
  *
  * This is a simple drop-in class for displaying a progress HUD view similar to Apple's private UIProgressHUD class.
- * The MBProgressHUD window spans over the entire space given to it by the initWithFrame constructor and catches all
+ * The YSMBProgressHUD window spans over the entire space given to it by the initWithFrame constructor and catches all
  * user input on this region, thereby preventing the user operations on components below the view. The HUD itself is
  * drawn centered as a rounded semi-transparent view which resizes depending on the user specified content.
  *
  * This view supports four modes of operation:
- * - MBProgressHUDModeIndeterminate - shows a UIActivityIndicatorView
- * - MBProgressHUDModeDeterminate - shows a custom round progress indicator
- * - MBProgressHUDModeAnnularDeterminate - shows a custom annular progress indicator
- * - MBProgressHUDModeCustomView - shows an arbitrary, user specified view (@see customView)
+ * - YSMBProgressHUDModeIndeterminate - shows a UIActivityIndicatorView
+ * - YSMBProgressHUDModeDeterminate - shows a custom round progress indicator
+ * - YSMBProgressHUDModeAnnularDeterminate - shows a custom annular progress indicator
+ * - YSMBProgressHUDModeCustomView - shows an arbitrary, user specified view (@see customView)
  *
  * All three modes can have optional labels assigned:
  * - If the labelText property is set and non-empty then a label containing the provided content is placed below the
  *   indicator view.
  * - If also the detailsLabelText property is set then another label is placed below the first label.
  */
-@interface MBProgressHUD : UIView
+@interface YSMBProgressHUD : UIView
 
 /**
  * Creates a new HUD, adds it to provided view and shows it. The counterpart to this method is hideHUDForView:animated:.
@@ -161,7 +161,7 @@ typedef void (^MBProgressHUDCompletionBlock)();
  * Finds all HUD subviews and returns them.
  *
  * @param view The view that is going to be searched.
- * @return All found HUD views (array of MBProgressHUD objects).
+ * @return All found HUD views (array of YSMBProgressHUD objects).
  */
 + (NSArray *)allHUDsForView:(UIView *)view;
 
@@ -250,7 +250,7 @@ typedef void (^MBProgressHUDCompletionBlock)();
  *
  * @see showAnimated:whileExecutingBlock:onQueue:completionBlock:
  */
-- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block completionBlock:(MBProgressHUDCompletionBlock)completion;
+- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block completionBlock:(YSMBProgressHUDCompletionBlock)completion;
 
 /**
  * Shows the HUD while a block is executing on the specified dispatch queue, then hides the HUD.
@@ -271,31 +271,31 @@ typedef void (^MBProgressHUDCompletionBlock)();
  * @see completionBlock
  */
 - (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block onQueue:(dispatch_queue_t)queue
-		  completionBlock:(MBProgressHUDCompletionBlock)completion;
+		  completionBlock:(YSMBProgressHUDCompletionBlock)completion;
 
 /**
  * A block that gets called after the HUD was completely hidden.
  */
-@property (copy) MBProgressHUDCompletionBlock completionBlock;
+@property (copy) YSMBProgressHUDCompletionBlock completionBlock;
 
 #endif
 
 /** 
- * MBProgressHUD operation mode. The default is MBProgressHUDModeIndeterminate.
+ * YSMBProgressHUD operation mode. The default is YSMBProgressHUDModeIndeterminate.
  *
- * @see MBProgressHUDMode
+ * @see YSMBProgressHUDMode
  */
-@property (assign) MBProgressHUDMode mode;
+@property (assign) YSMBProgressHUDMode mode;
 
 /**
  * The animation type that should be used when the HUD is shown and hidden. 
  *
- * @see MBProgressHUDAnimation
+ * @see YSMBProgressHUDAnimation
  */
-@property (assign) MBProgressHUDAnimation animationType;
+@property (assign) YSMBProgressHUDAnimation animationType;
 
 /**
- * The UIView (e.g., a UIImageView) to be shown when the HUD is in MBProgressHUDModeCustomView.
+ * The UIView (e.g., a UIImageView) to be shown when the HUD is in YSMBProgressHUDModeCustomView.
  * For best results use a 37 by 37 pixel view (so the bounds match the built in indicator bounds). 
  */
 @property (MB_STRONG) UIView *customView;
@@ -303,9 +303,9 @@ typedef void (^MBProgressHUDCompletionBlock)();
 /** 
  * The HUD delegate object. 
  *
- * @see MBProgressHUDDelegate
+ * @see YSMBProgressHUDDelegate
  */
-@property (MB_WEAK) id<MBProgressHUDDelegate> delegate;
+@property (MB_WEAK) id<YSMBProgressHUDDelegate> delegate;
 
 /** 
  * An optional short message to be displayed below the activity indicator. The HUD is automatically resized to fit
@@ -446,14 +446,14 @@ typedef void (^MBProgressHUDCompletionBlock)();
 @end
 
 
-@protocol MBProgressHUDDelegate <NSObject>
+@protocol YSMBProgressHUDDelegate <NSObject>
 
 @optional
 
 /** 
  * Called after the HUD was fully hidden from the screen. 
  */
-- (void)hudWasHidden:(MBProgressHUD *)hud;
+- (void)hudWasHidden:(YSMBProgressHUD *)hud;
 
 //点击关闭hud事件
 -(void)hudClickTabClose;
