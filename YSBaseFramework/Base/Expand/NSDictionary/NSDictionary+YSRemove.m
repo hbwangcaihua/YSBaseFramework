@@ -2,8 +2,8 @@
 //  NSDictionary+YSRemove.m
 //  YSFramework
 //
-//  Created by qitmac000370 on 2018/12/4.
-//  Copyright © 2018年 wch. All rights reserved.
+//  Created by caihua.wang on 2017/12/4.
+//  Copyright © 2017年 wch. All rights reserved.
 //
 
 #import "NSDictionary+YSRemove.h"

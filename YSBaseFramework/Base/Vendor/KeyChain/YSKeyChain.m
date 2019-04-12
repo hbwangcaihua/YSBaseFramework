@@ -1,9 +1,9 @@
 //
 //  YSKeyChain.m
-//  ApuRay
+//  YSFramework
 //
-//  Created by qitmac000370 on 2019/2/28.
-//  Copyright © 2019年 wch. All rights reserved.
+//  Created by caihua.wang on 2017/12/4.
+//  Copyright © 2017年 wch. All rights reserved.
 //
 
 #import "YSKeyChain.h"
