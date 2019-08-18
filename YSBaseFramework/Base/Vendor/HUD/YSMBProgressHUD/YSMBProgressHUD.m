@@ -527,7 +527,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 - (void)updateIndicators {
 	
 	BOOL isActivityIndicator = [indicator isKindOfClass:[UIActivityIndicatorView class]];
-	BOOL isRoundIndicator = [indicator isKindOfClass:[MBRoundProgressView class]];
+	BOOL isRoundIndicator = [indicator isKindOfClass:[YSMBRoundProgressView class]];
 	
 	if (mode == YSMBProgressHUDModeIndeterminate) {
 		if (!isActivityIndicator) {
@@ -545,18 +545,18 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	else if (mode == YSMBProgressHUDModeDeterminateHorizontalBar) {
 		// Update to bar determinate indicator
 		[indicator removeFromSuperview];
-		self.indicator = MB_AUTORELEASE([[MBBarProgressView alloc] init]);
+		self.indicator = MB_AUTORELEASE([[YSMBBarProgressView alloc] init]);
 		[self addSubview:indicator];
 	}
 	else if (mode == YSMBProgressHUDModeDeterminate || mode == YSMBProgressHUDModeAnnularDeterminate) {
 		if (!isRoundIndicator) {
 			// Update to determinante indicator
 			[indicator removeFromSuperview];
-			self.indicator = MB_AUTORELEASE([[MBRoundProgressView alloc] init]);
+			self.indicator = MB_AUTORELEASE([[YSMBRoundProgressView alloc] init]);
 			[self addSubview:indicator];
 		}
 		if (mode == YSMBProgressHUDModeAnnularDeterminate) {
-			[(MBRoundProgressView *)indicator setAnnular:YES];
+			[(YSMBRoundProgressView *)indicator setAnnular:YES];
 		}
 	} 
 	else if (mode == YSMBProgressHUDModeCustomView && customView != indicator) {
@@ -837,7 +837,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 @end
 
 
-@implementation MBRoundProgressView
+@implementation YSMBRoundProgressView
 
 #pragma mark - Lifecycle
 
@@ -943,7 +943,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 @end
 
 
-@implementation MBBarProgressView
+@implementation YSMBBarProgressView
 
 #pragma mark - Lifecycle
 

@@ -470,7 +470,7 @@ typedef void (^YSMBProgressHUDCompletionBlock)();
 /**
  * A progress view for showing definite progress by filling up a circle (pie chart).
  */
-@interface MBRoundProgressView : UIView 
+@interface YSMBRoundProgressView : UIView 
 
 /**
  * Progress (0.0 to 1.0)
@@ -500,7 +500,7 @@ typedef void (^YSMBProgressHUDCompletionBlock)();
 /**
  * A flat bar progress view. 
  */
-@interface MBBarProgressView : UIView
+@interface YSMBBarProgressView : UIView
 
 /**
  * Progress (0.0 to 1.0)

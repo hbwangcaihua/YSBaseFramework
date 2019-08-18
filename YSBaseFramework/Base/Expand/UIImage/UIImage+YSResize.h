@@ -25,4 +25,9 @@
  */
 -(UIImage*)compressToSize:(CGSize)size;
 
+/**
+ 高斯模糊
+ */
++(UIImage *)boxblurImage:(UIImage *)image withBlurNumber:(CGFloat)blur;
+
 @end

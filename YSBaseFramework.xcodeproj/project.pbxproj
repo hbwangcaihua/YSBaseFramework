@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD1A991722BC862100167508 /* UIView+YSUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1A991622BC862000167508 /* UIView+YSUtility.m */; };
 		CD51339B225B73CD00B02642 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD51339A225B73CD00B02642 /* AppDelegate.m */; };
 		CD51339E225B73CD00B02642 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD51339D225B73CD00B02642 /* ViewController.m */; };
 		CD5133A3225B73CE00B02642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5133A2225B73CE00B02642 /* Assets.xcassets */; };
@@ -45,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD1A991522BC862000167508 /* UIView+YSUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YSUtility.h"; sourceTree = "<group>"; };
+		CD1A991622BC862000167508 /* UIView+YSUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YSUtility.m"; sourceTree = "<group>"; };
 		CD513396225B73CD00B02642 /* YSBaseFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSBaseFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD513399225B73CD00B02642 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD51339A225B73CD00B02642 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -233,6 +236,8 @@
 		CD5133C5225B748B00B02642 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				CD1A991522BC862000167508 /* UIView+YSUtility.h */,
+				CD1A991622BC862000167508 /* UIView+YSUtility.m */,
 				CD5133C6225B748B00B02642 /* UIView+YSCornerShadow.m */,
 				CD5133C7225B748B00B02642 /* UIView+YSLayout.h */,
 				CD5133C8225B748B00B02642 /* UIView+YSLayout.m */,
@@ -462,6 +467,7 @@
 				CD513417225B748B00B02642 /* NSString+YSBase64.m in Sources */,
 				CD513415225B748B00B02642 /* NSData+YSBase64.m in Sources */,
 				CD5134CF225C315B00B02642 /* YSLCProgressHUD.m in Sources */,
+				CD1A991722BC862100167508 /* UIView+YSUtility.m in Sources */,
 				CD51339B225B73CD00B02642 /* AppDelegate.m in Sources */,
 				CD5134C9225C315B00B02642 /* YSKeyChain.m in Sources */,
 				CD513416225B748B00B02642 /* NSString+YSSerialize.m in Sources */,
